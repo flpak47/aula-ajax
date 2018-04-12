@@ -1,19 +1,51 @@
-function gravar()
-{
     var nome = document.getElementById("nome");
     var telefone = document.getElementById("telefone");
     var email = document.getElementById("email");
     var lista = document.getElementById("lista");
 
-    var novo = '<tr>'
-    + '<td>'+ nome.value +'</td>'
-    + '<td>'+ telefone.value +'</td>'
-    + '<td>'+ email.value +'</td>'
-    + '</tr>'
+function gravar()
+{
+    var div = document.getElementById("msg-erro");
+    div.style.display = "none";
 
-    lista.innerHTML += novo;    
+    if (nome.value == "" || nome.value.length < 3){
+        exibeErro("Campo nome é obrigatório!");
+        nome.focus();
+        return;
+    }  
+
+    var regex = /^\([0-9]+\)[0-9]{4}\-[0-9]{4}$/gm;
+
+    if (regex.exec(telefone.value) == null){
+        exibeErro("Campo telefone é obrigatório!");
+        telefone.focus();
+        return;
+    } 
+
+    if (email.value == ""){
+        exibeErro("Campo email é obrigatório!");
+        email.focus();
+        return;
+    } 
+
+    var novo = '<tr>'
+                + '<td>'+ nome.value +'</td>'
+                + '<td>'+ telefone.value +'</td>'
+                + '<td>'+ email.value +'</td>'
+                + '</tr>'
+
+    lista.innerHTML += novo;
 
 }
+
+function exibeErro(msg)
+{
+    var div = document.getElementById("msg-erro");
+    div.innerHTML = msg;
+    div.style.display = "block";
+}
+
+
 
 function pegar()
 {

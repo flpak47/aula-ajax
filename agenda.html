@@ -7,7 +7,7 @@
         Aula de JS
     </title>
 
-    <script type="text/javascript" src="agenda.js"></script>
+    
 
     <style type="text/css">
 
@@ -39,7 +39,17 @@
         {
             background-color: silver;
         }
-
+        
+        #msg-erro
+        {
+            color: red;
+            border: 1px solid;
+            padding: 4px;
+            margin: 4px;
+            background-color: pink;
+            text-align: center;
+            display: none;            
+        }
 
 
 
@@ -52,6 +62,9 @@
     <h1>Agenda</h1>
 
     <fieldset class="form">
+
+        <div id="msg-erro"></div>
+        
         <label>Nome</label>
         <input type="text" id="nome"/>
         <br>
@@ -84,13 +97,14 @@
                         <td>996847755</td>
                         <td>fabio@uol.com.br</td>
                     </tr>
+                    
         </tbody>
 
 
 
 
     </table>
-
+    <script type="text/javascript" src="agenda.js"></script>
    
 </body>
 
