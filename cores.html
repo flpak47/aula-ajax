@@ -1,0 +1,64 @@
+<html>
+
+<head>
+	<title>Jquery</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    
+    <script type="text/javascript" src="cores.js"></script>
+
+    <style>
+        #box-cor {
+            border: 1px solid;
+            width: 120px;
+            margin: 20px;
+            padding: 20px;            
+        }
+    
+    
+    </style>
+
+    </head>
+
+    <body>
+        
+        <h1>Lista de cores</h1>
+
+        <label>Vermelho</label>
+        <input type="range" id="vermelho" min="0" max="255" step="10" value="0"/>
+
+        <label>Verde</label>
+        <input type="range" id="verde" min="0" max="255" step="10" value="0"/>
+
+        <label>Azul</label>
+        <input type="range" id="azul" min="0" max="255" step="10" value="0"/>
+
+        <div id="box-cor">
+            rgb(123,12,321)
+
+        </div>
+
+        
+        <table id="lista-cores">
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Cor</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                
+            </tbody>
+
+
+
+        </table>
+
+
+
+
+    </body>
+
+</html>
