@@ -1,0 +1,110 @@
+<html>
+
+<head>
+	<title>Cadastro de clientes</title>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script type="text/javascript" src="clientes.js"></script>
+
+    <style>
+        fieldset{
+            width: 400px;
+        }
+
+        label{
+            width: 150px;
+            display: inline-block;
+        }
+
+        fieldset button{
+            float: right;
+        }
+
+        table{
+            width: 500px;
+            margin-top: 20px;
+            border: 1px solid;  
+            border-collapse: collapse;          
+        }
+
+        table td, table th{
+            border: 1px solid;
+            padding: 4px;            
+        }
+
+        table th{
+            background-color: darkblue;
+            color: white;
+        }
+        
+        label:nth-of-type(2) {
+            color: red;
+        }
+
+        fieldset + button{
+            color: blue;
+        }
+       
+    </style>
+
+</head>
+
+<body>
+    <h1>Cadastro de clientes</h1>
+
+    <fieldset>
+        <legend>Dados do Cliente</legend>
+        <label>Nome</label>
+        <input type="text" name="nome" />
+        <br>
+
+        <label>Email</label>
+        <input type="text" name="email" />
+        <br>
+
+        <label>CEP</label>
+        <input type="text" name="cep" />
+        <br>
+
+        <label>Nome</label>
+        <input type="text" name="nome" />
+        <br>
+
+        <label>Data de Nascimento</label>
+        <input type="text" name="data-nasc" />
+        <br>
+
+        <button>Adicionar</button>
+
+
+    </fieldset>
+
+    <button>Carregar</button>
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>CEP</th>
+                <th>Data de Nascimento</th>
+            </tr>            
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>Fabio</td>
+                <td>flp@hotmail.com</td>
+                <td>3025-3300</td>
+                <td>08/09/2000</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+
+</body>
+
+</html>
