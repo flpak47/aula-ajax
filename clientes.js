@@ -48,18 +48,29 @@ $(function(){
                 + '<td>'+ dataNasc +'</td>'
                 + '</tr>';
 
-            var tr2 = $(tr).hide().fadeIn(2000);    
+            var form = {
+                "nome": nome,
+                "email": email,
+                "cep": cep,
+                "dataNasc": dataNasc
+            };
+            
+            $.post('/clientes.php', form);
 
-            $("tbody").append(tr2);
 
-        });
+           
+
+        });//fim do click
 
         $("input[name=cep]").keydown(function(ev){
-
-            if (ev.keyCode < 48 || ev.keyCode > 57)
+            console.log(ev);
+    
+            if ((ev.keyCode >= 48 && ev.keyCode <= 57) || ev.keyCode == 8  )
             {
-            return false;
-            }    
+                return true;
+            } else {
+                return false;
+            }
         });
 
         $("input[name=dataNasc]").datepicker({
